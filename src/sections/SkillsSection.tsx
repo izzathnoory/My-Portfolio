@@ -1,7 +1,20 @@
 "use client";
 
+import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import SectionWrapper from "@/components/SectionWrapper";
+import { 
+  FaJava, FaJs, FaPython, FaPhp, FaHtml5, FaCss3Alt, FaBootstrap, 
+  FaReact, FaNodeJs, FaGitAlt, FaGithub, FaNpm, FaFigma 
+} from "react-icons/fa";
+import { 
+  SiTypescript, SiTailwindcss, SiNextdotjs, SiExpress, SiDotnet, 
+  SiMysql, SiFirebase, SiSupabase, SiGooglecloud, SiGithubactions, 
+  SiVite, SiApache, SiNetlify, SiPandas, SiNumpy, SiThreedotjs, 
+  SiCanva 
+} from "react-icons/si";
+import { TbBrandCSharp } from "react-icons/tb";
+import { DiMsqlServer, DiPhotoshop } from "react-icons/di";
 
 /**
  * SkillsSection - Categorized skills display with icons and hover animations.
@@ -10,7 +23,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 
 interface Skill {
   name: string;
-  icon: string; // Emoji or text-based icon for simplicity & reliability
+  icon: ReactNode;
 }
 
 interface SkillCategory {
@@ -24,70 +37,70 @@ const skillCategories: SkillCategory[] = [
     title: "Programming Languages",
     color: "#6366f1",
     skills: [
-      { name: "C#", icon: "⚡" },
-      { name: "Java", icon: "☕" },
-      { name: "JavaScript", icon: "🟨" },
-      { name: "TypeScript", icon: "🔷" },
-      { name: "Python", icon: "🐍" },
-      { name: "PHP", icon: "🐘" },
+      { name: "C#", icon: <TbBrandCSharp /> },
+      { name: "Java", icon: <FaJava /> },
+      { name: "JavaScript", icon: <FaJs /> },
+      { name: "TypeScript", icon: <SiTypescript /> },
+      { name: "Python", icon: <FaPython /> },
+      { name: "PHP", icon: <FaPhp /> },
     ],
   },
   {
     title: "Web & Frameworks",
     color: "#06b6d4",
     skills: [
-      { name: "HTML5", icon: "🌐" },
-      { name: "CSS3", icon: "🎨" },
-      { name: "Bootstrap", icon: "🅱️" },
-      { name: "TailwindCSS", icon: "💨" },
-      { name: "React", icon: "⚛️" },
-      { name: "React Native", icon: "📱" },
-      { name: "Next.js", icon: "▲" },
-      { name: "Node.js", icon: "🟢" },
-      { name: "Express.js", icon: "🚀" },
-      { name: ".NET", icon: "🔮" },
+      { name: "HTML5", icon: <FaHtml5 /> },
+      { name: "CSS3", icon: <FaCss3Alt /> },
+      { name: "Bootstrap", icon: <FaBootstrap /> },
+      { name: "TailwindCSS", icon: <SiTailwindcss /> },
+      { name: "React", icon: <FaReact /> },
+      { name: "React Native", icon: <FaReact /> },
+      { name: "Next.js", icon: <SiNextdotjs /> },
+      { name: "Node.js", icon: <FaNodeJs /> },
+      { name: "Express.js", icon: <SiExpress /> },
+      { name: ".NET", icon: <SiDotnet /> },
     ],
   },
   {
     title: "Databases & Cloud",
     color: "#10b981",
     skills: [
-      { name: "MySQL", icon: "🐬" },
-      { name: "MS SQL Server", icon: "🗄️" },
-      { name: "Firebase", icon: "🔥" },
-      { name: "Supabase", icon: "⚡" },
-      { name: "Google Cloud", icon: "☁️" },
+      { name: "MySQL", icon: <SiMysql /> },
+      { name: "MS SQL Server", icon: <DiMsqlServer /> },
+      { name: "Firebase", icon: <SiFirebase /> },
+      { name: "Supabase", icon: <SiSupabase /> },
+      { name: "Google Cloud", icon: <SiGooglecloud /> },
     ],
   },
   {
     title: "Tools & Platforms",
     color: "#f59e0b",
     skills: [
-      { name: "Git", icon: "🔀" },
-      { name: "GitHub", icon: "🐙" },
-      { name: "GitHub Actions", icon: "⚙️" },
-      { name: "NPM", icon: "📦" },
-      { name: "Vite", icon: "⚡" },
-      { name: "Apache", icon: "🪶" },
-      { name: "Netlify", icon: "🌍" },
+      { name: "Git", icon: <FaGitAlt /> },
+      { name: "GitHub", icon: <FaGithub /> },
+      { name: "GitHub Actions", icon: <SiGithubactions /> },
+      { name: "NPM", icon: <FaNpm /> },
+      { name: "Vite", icon: <SiVite /> },
+      { name: "Apache", icon: <SiApache /> },
+      { name: "Netlify", icon: <SiNetlify /> },
     ],
   },
   {
     title: "Libraries & Data Tools",
     color: "#8b5cf6",
     skills: [
-      { name: "Pandas", icon: "🐼" },
-      { name: "NumPy", icon: "🔢" },
-      { name: "Three.js", icon: "🎲" },
+      { name: "Pandas", icon: <SiPandas /> },
+      { name: "NumPy", icon: <SiNumpy /> },
+      { name: "Three.js", icon: <SiThreedotjs /> },
     ],
   },
   {
     title: "Design Tools",
     color: "#ec4899",
     skills: [
-      { name: "Figma", icon: "🎯" },
-      { name: "Canva", icon: "🖼️" },
-      { name: "Photoshop", icon: "📸" },
+      { name: "Figma", icon: <FaFigma /> },
+      { name: "Canva", icon: <SiCanva /> },
+      { name: "Photoshop", icon: <DiPhotoshop /> },
     ],
   },
 ];
